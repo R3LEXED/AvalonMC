@@ -4,64 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Minecraft Server</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #800080; /* Purple background */
-            color: white;
-            font-family: Arial, sans-serif;
-        }
-        .ball {
-            position: absolute;
-            border-radius: 50%;
-            background-color: rgba(200, 162, 200, 0.8); /* Lighter purple balls */
-            animation: float 10s infinite;
-        }
-        @keyframes float {
-            0% {
-                transform: translateY(100vh) translateX(0);
-            }
-            100% {
-                transform: translateY(-100vh) translateX(100vw);
-            }
-        }
-        .ball:nth-child(odd) {
-            animation-duration: 15s;
-            animation-direction: alternate;
-        }
-    </style>
     <script type="text/javascript">
-        window.location.href = "minecraft:///?addExternalServer=NetherGames%20Network|play.nethergames.org:19132";
+        window.location.href = "minecraft:///?addExternalServer=AvalonMC|198.244.177.123:19209";
     </script>
 </head>
 <body>
-    <div>If you are not redirected automatically, <a href="minecraft:///?addExternalServer=NetherGames%20Network|play.nethergames.org:19132">click here to join the Minecraft server</a>.</div>
-    <script>
-        function createBall() {
-            const ball = document.createElement('div');
-            ball.className = 'ball';
-            const size = Math.random() * 50 + 20; // Random size between 20 and 70
-            ball.style.width = `${size}px`;
-            ball.style.height = `${size}px`;
-            ball.style.left = `${Math.random() * 100}vw`;
-            ball.style.top = `${Math.random() * 100}vh`;
-            document.body.appendChild(ball);
-
-            // Remove ball after animation completes
-            ball.addEventListener('animationend', () => {
-                document.body.removeChild(ball);
-            });
-        }
-
-        // Create multiple balls
-        for (let i = 0; i < 15; i++) {
-            setTimeout(createBall, i * 500); // Stagger ball creation
-        }
-    </script>
 </body>
 </html>
